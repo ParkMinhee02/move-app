@@ -1,0 +1,37 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	background: rgba(207, 230, 255, 0.668);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	box-sizing: border-box;
+	z-index: 10;
+	.logo {
+		a {
+			color: red;
+			text-decoration: none;
+			font-size: 24px;
+			font-weight: bold;
+		}
+	}
+	ul {
+		list-style: none;
+		display: flex;
+		li {
+			a {
+				padding: 10px;
+				text-decoration: none;
+				color: #444;
+				font-size: 14px;
+			}
+		}
+	}
+}
