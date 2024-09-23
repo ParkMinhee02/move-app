@@ -1,14 +1,24 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
+import { MdOutlineMovieFilter } from "react-icons/md";
 
 const Navbar = () => {
+	const activeStyle = {
+		color: 'red',
+		textShadow: '1px 1px 2px #fff'
+	};
 	return (
 		<nav>
-			<div className="logo"><Link to='/'>LOGO</Link></div>
+			<div className="logo">
+					<Link to='/'>
+						{/* <img src={process.env.PUBLIC_URL+'/logo.svg'} alt="logo" /> */}
+						<MdOutlineMovieFilter />
+					</Link>
+				</div>
 			<ul>
-				<li><Link to=''>Home</Link></li>
-				<li><Link to='movies'>Movies</Link></li>
-				<li><Link to='about'>About</Link></li>
+				<li><NavLink to='' style={({isActive})=>(isActive?activeStyle : undefined)}>Home</NavLink></li>
+				<li><NavLink to='movies' style={({isActive})=>(isActive?activeStyle : undefined)}>Movies</NavLink></li>
+				<li><NavLink to='about' style={({isActive})=>(isActive?activeStyle : undefined)}>About</NavLink></li>
 			</ul>
 		</nav>
 	);
