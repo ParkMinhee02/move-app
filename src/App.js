@@ -3,6 +3,7 @@ import {Routes, Route} from 'react-router-dom';
 import Home from "./routes/Home";
 import About from "./routes/About";
 import Movies from "./routes/Movies";
+import Users from "./routes/Users";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import './App.scss'
@@ -24,6 +25,7 @@ function App() {
 			<Route path='/' element={<Home />} />
 			<Route path='/about/:id' element={<About />} />
 			<Route path='/movies' element={<Movies />} />
+			<Route path='/users' element={<Users />} />
 		</Routes>
 		<Footer />
 	</div>
