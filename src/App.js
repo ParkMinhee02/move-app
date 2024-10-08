@@ -4,6 +4,9 @@ import Home from "./routes/Home";
 import About from "./routes/About";
 import Movies from "./routes/Movies";
 import Users from "./routes/Users";
+import User from './routes/User';
+import Events from './routes/Events';
+import Event from './routes/Event';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import './App.scss'
@@ -23,9 +26,12 @@ function App() {
 
 		<Routes>
 			<Route path='/' element={<Home />} />
-			<Route path='/about/:id' element={<About />} />
 			<Route path='/movies' element={<Movies />} />
+			<Route path='/about/:id' element={<About />} />
+			<Route path='/events' element={<Events />} />
+			<Route path='/events/:id' element={<Event />} />
 			<Route path='/users' element={<Users />} />
+			<Route path='/users/:id' element={<User />} />
 		</Routes>
 		<Footer />
 	</div>
